@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="MailCheck" parallel="tests" thread-count="4" verbose="2">
+
+    <test name="TestGridChrome">
+        <parameter name="browser" value="Chrome"></parameter>
+        <classes>
+            <class name="com.epam.page_object.test.TestNewMailPageJS"/>
+        </classes>
+
+    </test>
+
+    <test name="TestGridFF">
+        <parameter name="browser" value="Firefox"></parameter>
+        <classes>
+            <class name="com.epam.page_object.test.TestNewMailPageActions"/>
+        </classes>
+
+    </test>
+
+</suite>
